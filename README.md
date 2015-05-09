@@ -22,8 +22,8 @@ The final project in this course is a project to build a card matching game. You
   * Total score for the player
   * Star ranking based on this breakdown:
     * If score is zero (0) or less, no stars
-    * If score is between 0 and 10, one star
-    * If score is between 11 and 20, two stars
+    * If score is between 0 and 5, one star
+    * If score is between 6 and 20, two stars
     * If score is between 21 and 30, three stars
   * Play again button; if clicked, game resets and starts again.
   * Note: There is no need to save scores over time in the base requirements
