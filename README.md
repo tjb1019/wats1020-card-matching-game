@@ -1,8 +1,6 @@
 # wats1020-card-matching-game
 A repository to help kickstart the card matching game final project.
 
-TODO: Fill in with guidance and information about how to complete the card matching game project. Especially important is to include a base set of image assets that can be used to build the game.
-
 The final project in this course is a project to build a card matching game. You might know this kind of game as "Memory". We will use slightly customized rules to build a solitaire version of the game. The base requirements define a basically playable in-browser game that can be built with Javascript, HTML and CSS
 
 ##Base Requirements
