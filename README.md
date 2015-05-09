@@ -15,7 +15,7 @@ The final project in this course is a project to build a card matching game. You
     * The player earns 5 points.
     * The cards disappear from the grid.
   * If the cards do not match:
-    * The player loses 2 points. 
+    * The player loses 2 points.
     * The cards return to their original face-down position.
 * Player repeats play turns until all the cards are removed from the grid.
 * When no cards are left, a Game Over screen is shown displaying the following information:
@@ -40,10 +40,16 @@ The final project in this course is a project to build a card matching game. You
 * Players enter their name when they start the first game.
   * Store this in localStorage for retrieval throughout the gameplay
   * Use this value to enhance messaging and information display during the game
-* Players can share their score and a link to your game when they complete the game. 
+* Players can share their score and a link to your game when they complete the game.
   * Add a button to "Share" the final results of the game alongside the "Play Again" button
   * Enable sharing to a social network (or multiple) of your choosing.
 * Enhanced animations
   * There are many animations throughout this game. Make them awesome.
 * Deploy at a custom domain or subdomain. (This is especially good if allowing people to share your link.)
 * Add Google Analytics so you can see how popular your card game is.
+
+## Credits and Attributions
+
+This project uses the images from the ["Notable Women in Computer Science Playing Card Deck"](http://www.cs.duke.edu/csed/wikipedia/).
+
+This project uses background images from [Subtle Patterns](http://subtlepatterns.com).
