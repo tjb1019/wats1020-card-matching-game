@@ -37,6 +37,7 @@ The final project in this course is a project to build a card matching game. You
 
 ## Stretch Requirements
 
+* Add your own graphics and enhance the visual presentation
 * Players enter their name when they start the first game.
   * Store this in localStorage for retrieval throughout the gameplay
   * Use this value to enhance messaging and information display during the game
@@ -44,7 +45,7 @@ The final project in this course is a project to build a card matching game. You
   * Add a button to "Share" the final results of the game alongside the "Play Again" button
   * Enable sharing to a social network (or multiple) of your choosing.
 * Enhanced animations
-  * There are many animations throughout this game. Make them awesome.
+  * There are many opportunities for animations throughout this game. Make them awesome.
 * Deploy at a custom domain or subdomain. (This is especially good if allowing people to share your link.)
 * Add Google Analytics so you can see how popular your card game is.
 
