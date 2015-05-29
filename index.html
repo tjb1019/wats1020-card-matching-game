@@ -27,53 +27,70 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Card Matching Game</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Instructions</a></li>
-            <li><a href="#">Credits</a></li>
-          </ul>
-          <form class="navbar-form navbar-right">
-            <button class="btn btn-sm btn-success">Restart</button>
-          </form>
-        </div><!--/.navbar-collapse -->
-      </div>
-    </nav>
-
-    <div class="container">
-      <div class="game-container">
-        <h1>Let's Play!</h1>
-        <p>Click below to start your game. Here's how you play:</p>
-        <ol class="instructions">
-          <li>Select two cards from the grid shown.</li>
-          <li>If they match, you earn points! If not, you lose points!</li>
-          <li>Try to win lots of points!</li>
-        </ol>
-        <p><button class="btn btn-lg btn-success btn-start-game">Start the Game</button></p>
-      </div>
-      <hr>
-
-      <footer>
-        <p>&copy; Jane Student 2015</p>
-      </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+		<header>
+			<div class="jumbotron">
+				<h1 class="text-center">Card Matching Game</h1>
+			</div>
+		</header>
+		<div class="container" id="gameboard">
+			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+				<img src="img/deck/1.jpg" alt="" class="img-responsive">
+				<p></p>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+				<img src="img/deck/2.jpg" alt="" class="img-responsive">
+				<p></p>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+				<img src="img/deck/3.jpg" alt="" class="img-responsive">
+				<p></p>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+				<img src="img/deck/4.jpg" alt="" class="img-responsive">
+				<p></p>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+				<img src="img/deck/5.jpg" alt="" class="img-responsive">
+				<p></p>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+				<img src="img/deck/6.jpg" alt="" class="img-responsive">
+				<p></p>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+				<img src="img/deck/7.jpg" alt="" class="img-responsive">
+				<p></p>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+				<img src="img/deck/8.jpg" alt="" class="img-responsive">
+				<p></p>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+				<img src="img/deck/9.jpg" alt="" class="img-responsive">
+				<p></p>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+				<img src="img/deck/10.jpg" alt="" class="img-responsive">
+				<p></p>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+				<img src="img/deck/11.jpg" alt="" class="img-responsive">
+				<p></p>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+				<img src="img/deck/12.jpg" alt="" class="img-responsive">
+				<p></p>
+			</div>
+		</div> <!-- end container, gameboard -->
+      
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
 
         <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. 
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
@@ -81,6 +98,6 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
+        </script> -->
     </body>
 </html>
