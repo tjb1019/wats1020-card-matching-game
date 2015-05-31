@@ -7,36 +7,15 @@ body {
 	font-family: 'Oswald';
 }
 
-#gameboard {
-	width: 66%;
+#scoreboard-header {
+	text-transform: uppercase;
+	text-decoration: underline;
 }
 
-#footer-list a {
-	background: white;
-	border: 1px solid yellow;
+.card {
+	padding-bottom: 1rem;
 }
 
-#footer-list a:hover {
-	text-decoration: none;
-	background: #8D4BB3;
-	color: yellow;
-}
-
-footer {
-	background: #8D4BB3;
-	padding-bottom: 5rem;
-}
-
-th, td {
-	padding: 1rem;
-}
-
-/*Stack footer li's from medium screen size and below */
-@media (max-width: 992px) {
-	#footer-list li {
-		display: block;
-	}
-}
 
 
 
