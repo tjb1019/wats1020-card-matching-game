@@ -3,13 +3,17 @@ body {
 }
 
 .jumbotron {
-	background: #8D4BB3;
+	background: #265a88;
 	font-family: 'Oswald';
 }
 
-#scoreboard-header {
+.score-title {
 	text-transform: uppercase;
 	text-decoration: underline;
+}
+
+.board-title {
+	font-weight: bold;
 }
 
 .card {
