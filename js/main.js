@@ -162,5 +162,21 @@ function deactivateCards(wrongCard) {
 	gameState.cardsLeft -= (gameState.matched.length * 2);
 	
 	if (gameState.cardsLeft <= 0) {
-		endGame();
+		gameOver();
 	}
+
+function gameOver() {
+	var starRating = null;
+	
+	if (gameState.score >= 21) {
+		starRating = "3 STARS!";
+	}
+	else if (gameState.score >= 6 && gameState.score <= 20) {
+		starRating = "2 STARS!";
+	}
+	else if (gameState.score >= 1 && gameState.score <= 5) {
+		starRating = "1 STAR!";
+	}else{
+		starRating = "0 STARS!";
+	}
+}
