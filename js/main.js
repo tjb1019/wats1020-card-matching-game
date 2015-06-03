@@ -64,7 +64,7 @@ $(document).on('ready', function() {
 		// Create shuffled deck for current game
 		var deck1 = shuffle(deck.slice()); // make copy of deck and shuffle
 		var deck2 = shuffle(deck.slice()); // make another copy of deck and shuffle
-		gameState.gameCards.concat(deck1, deck2); // combine decks so that there are 2 of each card
+		gameState.gameCards = [].concat(deck1, deck2); // combine decks so that there are 2 of each card
 
 		// Empty out gameBoard for each new game
 		gameBoard.empty();
@@ -76,43 +76,42 @@ $(document).on('ready', function() {
 	function shuffle(array) {
 		var temp = []; 
 		var n = array.length;
-		var i = null;
+		var i;
 
-	  // Loop through entire array
-	  while(n) {
+		// Loop through entire array
+		while(n) {
 
-		// Pick an element
-		i = Math.floor(Math.random() * n--);
+			// Pick an element
+			i = Math.floor(Math.random() * n--);
 
-		// Move it to the temp array
-		temp.push(array.splice(i, 1)[0]);
-	  }
+			// Move it to the temp array
+			temp.push(array.splice(i, 1)[0]);
+		}
 
-	  return temp;
+		return temp;
 	}
 
 	function buildGame() {
 		// Loop through gameCard array and create new div for each card
 		$.each(gameState.gameCards, function(key, item){
 			var cardFilePath = 'img/deck/' + item.fileName;
-			var newCard = $('div').attr({
+			var newCard = $('<div>').attr({
 				class: 'card col-xs-6 col-sm-4 col-md-3 col-lg-3',
 				style: 'background: url("' + cardFilePath + '") center no-repeat; background-size: contain;',
 				'data-name': item.name,
 				'data-file': item.fileName
 			});
-		});
+			
+			// Add the cardBack effect to each new div
+			var backing = $('<span class="back">');
+			backing.appendTo(newCard);
+			
+			// Append new div to gameBoard
+			newCard.appendTo(gameBoard);
 
-		// Add the cardBack effect to each new div
-		$('span').attr({
-			class: 'back'
-		}).appendTo(newCard);	
-
-		// Append new div to gameBoard
-		newCard.appendTo(gameBoard);
-
-		// Add event listener for each card
-		addClickHandler(newCard);
+			// Add event listener for each card
+			addClickHandler(newCard);
+		});	
 	}
 
 	function addClickHandler(newDiv) {
@@ -122,8 +121,8 @@ $(document).on('ready', function() {
 		});
 	}
 
-	function checkGuess(target) {
-		var clickTarget = $(target.parentElement); // capture span element that was clicked
+	function checkUserGuess(target) {
+		var clickTarget = $(target.parentElement); // capture div element that was clicked
 
 		// Create card object for element that was clicked
 		var guessCard = {
