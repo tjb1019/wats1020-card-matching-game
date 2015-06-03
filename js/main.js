@@ -214,6 +214,7 @@ $(document).on('ready', function() {
 		playerRating.appendTo(gameBoard);
 
 		var playAgainButton = $('<p class="play-again btn btn-lg btn-primary">');
+		playAgainButton.text('Play Again');
 	}
 
 	/* Button event handlers */
