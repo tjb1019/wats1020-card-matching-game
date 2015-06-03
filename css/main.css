@@ -16,7 +16,12 @@ body {
 	font-weight: bold;
 }
 
-.card,
+.card {
+	margin: 1rem;
+	height: 200px;
+	width: 150px;
+}
+
 .matchedCard {
 	margin: 1rem;
 	height: 200px;
@@ -29,7 +34,7 @@ body {
     height: 100%;
     z-index: 100;
 	margin: 0;
-    padding: 0;
+	padding: 0;
 	position: absolute;
 }
 

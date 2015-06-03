@@ -144,7 +144,7 @@ $(document).on('ready', function() {
 				// Recalculate score and update scoreboard
 				calculateScore();
 				scoreboardUpdate();
-				deactivateCards();
+				deactivateCards(gameState.currentTurn[0]);
 
 				// Empty out currentTurn array for next turn
 				gameState.currentTurn = [];
@@ -174,8 +174,8 @@ $(document).on('ready', function() {
 		gameState.currentTurn = [];
 	}
 
-	function deactivateCards(wrongCard) {
-		var matchedCards = $('div[data-name="'+ wrongCard.name +'"].card');
+	function deactivateCards(correctCard) {
+		var matchedCards = $('div[data-name="'+ correctCard.name +'"].card');
 		matchedCards.off('click');
 		matchedCards.removeClass('card').addClass('matchedCard');
 		gameState.cardsLeft -= (gameState.matched.length * 2);
@@ -186,7 +186,7 @@ $(document).on('ready', function() {
 	}
 
 	function gameOver() {
-		var starRating = null;
+		var starRating;
 
 		// Calculate player's star rating
 		if (gameState.score >= 21) {
@@ -205,16 +205,15 @@ $(document).on('ready', function() {
 		gameBoard.empty();
 
 		// Create info display for gameover content
-		var gameOverTitle = $('<h2>');
+		var gameOverTitle = $('<h2 class="page-header">');
 		gameOverTitle.text("GAME OVER");
 		gameOverTitle.appendTo(gameBoard);
 
 		var playerRating = $('<p>');
-		playerRating.text("Your star rating this game: " + rating);
+		playerRating.text("Your star rating this game: " + starRating);
 		playerRating.appendTo(gameBoard);
 
-		var playAgainButton = $('<button class="play-again btn btn-lg btn-primary">');
-		playAgainButton.text("Play Again");
+		var playAgainButton = $('<p class="play-again btn btn-lg btn-primary">');
 	}
 
 	/* Button event handlers */
@@ -227,7 +226,6 @@ $(document).on('ready', function() {
 
 	// Play again 
 	$('.play-again').on('click', function(event) {
-		event.preventDefault();
 		initializeGame();
 	});
 
