@@ -213,7 +213,7 @@ $(document).on('ready', function() {
 		playerRating.text("Your star rating this game: " + starRating);
 		playerRating.appendTo(gameBoard);
 
-		var playAgainButton = $('<p class="play-again btn btn-lg btn-primary text-center">');
+		var playAgainButton = $('<button class="play-again btn btn-md btn-success center-block">');
 		playAgainButton.text('Play Again');
 		playAgainButton.appendTo(gameBoard);
 	}
@@ -228,7 +228,6 @@ $(document).on('ready', function() {
 
 	// Play again 
 	$('.play-again').on('click', function(event) {
-		event.preventDefault();
 		initializeGame();
 	});
 
