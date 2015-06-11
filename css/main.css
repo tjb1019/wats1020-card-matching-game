@@ -7,6 +7,10 @@ body {
 	font-family: 'Bangers';
 }
 
+#scoreboard {
+	display: none;
+}
+
 .score-title {
 	text-transform: uppercase;
 	text-decoration: underline;
@@ -30,6 +34,7 @@ body {
 	margin: 1rem;
 	height: 200px;
 	width: 150px;
+	overflow: hidden;
 }
 
 .matchedCard {
@@ -47,6 +52,7 @@ body {
 	padding: 0;
 	position: absolute;
 }
+
 
 
 

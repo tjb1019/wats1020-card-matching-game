@@ -35,34 +35,32 @@
 		</header>
 		<div class="container">
 			<div class="row">
-				<div id="gameboard" class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-					<!-- cards added through JS -->
-				</div> <!-- end gameboard -->
-				<div id="scoreboard-rules" class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-center">
+				<div id="scoreboard" class="col-xs-6 col-xs-offset-3 text-center">
 					<h3 class="score-title">Scoreboard</h3>
 					<div class="row">
 						<span class="board-title">Score: </span>
 						<span class="score-visual">0</span>
-					</div>
-					<div class="row">
 						<span class="board-title">Matches: </span>
 						<span class="matches-visual">0</span>
-					</div>
-					<div class="row">
 						<span class="board-title">Guesses: </span>
 						<span class="guesses-visual">0</span>
 					</div>
-					<div class="row">
-						<h3 class="score-title">Rules</h3>
-						<p>Click below to start your game. Here's how you play:</p>
-        				<ol class="instructions">
-          					<li>Select two cards from the grid shown.</li>
-          					<li>If they match, you earn points! If not, you lose points!</li>
-          					<li>Try to win lots of points!</li>
-        				</ol>
-        				<p><button class="btn btn-md btn-success btn-start">Start the Game</button></p>
-					</div>
 				</div> <!-- end scoreboard-rules -->
+				<div id="rules" class="col-xs-6 col-xs-offset-3 text-center">
+					<h3 class="score-title">Rules</h3>
+					<p>Click below to start your game. Here's how you play:</p>
+					<ol class="instructions">
+						<li>Select two cards from the grid shown.</li>
+						<li>If they match, you earn points! If not, you lose points!</li>
+						<li>Try to win lots of points!</li>
+					</ol>
+					<p><button class="btn btn-md btn-success btn-start">Start the Game</button></p>
+				</div>
+			</div>
+			<div class="row">
+				<div id="gameboard" class="col-xs-12">
+					<!-- cards added through JS -->
+				</div> <!-- end gameboard -->
 			</div> <!-- end row -->
 		</div> <!-- end bootstrap container -->
       

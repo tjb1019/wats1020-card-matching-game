@@ -8,7 +8,7 @@ $(document).on('ready', function() {
 		matches: 0,
 		guesses: 0,
 		score: 0,
-		cardsLeft: 12
+		cardsLeft: 0
 	};
 
 	var deck = [
@@ -139,7 +139,7 @@ $(document).on('ready', function() {
 
 			if (gameState.currentTurn[0].name == gameState.currentTurn[1].name){
 				gameState.matches += 1;
-				gameState.matched.push(guessCard);
+				gameState.matched.push(gameState.currentTurn[0]);
 
 				// Recalculate score and update scoreboard
 				calculateScore();
@@ -153,6 +153,8 @@ $(document).on('ready', function() {
 				scoreboardUpdate();
 				resetGuess();
 			}
+		} else if (gameState.currentTurn.length > 2) {
+			console.log("Shit got real");
 		}
 	}
 
@@ -178,7 +180,9 @@ $(document).on('ready', function() {
 		var matchedCards = $('div[data-name="'+ correctCard.name +'"].card');
 		matchedCards.off('click');
 		matchedCards.removeClass('card').addClass('matchedCard');
-		gameState.cardsLeft -= (gameState.matched.length * 2);
+		console.log(matchedCards.length);
+		gameState.cardsLeft = gameState.cardsLeft - (gameState.matched.length * 2);
+		console.log(gameState.cardsLeft);
 
 		if (gameState.cardsLeft <= 0) {
 			gameOver();
@@ -214,6 +218,10 @@ $(document).on('ready', function() {
 		playerRating.appendTo(gameBoard);
 
 		var playAgainButton = $('<button class="play-again btn btn-md btn-success center-block">');
+		
+		$(playAgainButton).on('click', function(event) {
+			initializeGame();
+		});
 		playAgainButton.text('Play Again');
 		playAgainButton.appendTo(gameBoard);
 	}
@@ -223,11 +231,11 @@ $(document).on('ready', function() {
 	// Start game
 	$('.btn-start').on('click', function(event) {
 		event.preventDefault();
-		initializeGame();
-	});
-
-	// Play again 
-	$('.play-again').on('click', function(event) {
+		
+		var ruleBox = $('#rules');
+		ruleBox.toggle();
+		var scoreBoard = $('#scoreboard');
+		scoreBoard.toggle();
 		initializeGame();
 	});
 
