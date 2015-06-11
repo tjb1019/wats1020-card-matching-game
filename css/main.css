@@ -3,22 +3,21 @@ body {
 }
 
 .jumbotron {
-	background: #265a88;
+	background: #E2F22E;
 	font-family: 'Bangers';
 }
 
 #scoreboard {
 	display: none;
+	font-size: 300%;
 }
 
 .score-title {
-	text-transform: uppercase;
 	text-decoration: underline;
 	font-family: 'Bangers';
 }
 
 .board-title {
-	font-weight: bold;
 	font-family: 'Bangers';
 }
 
@@ -26,8 +25,8 @@ body {
 .guesses-visual,
 .matches-visual {
 	font-family: 'Bangers';
-	font-size: 2rem;
-	color: green;
+	color: #E2F22E;
+	padding-right: 5rem;
 }
 
 .card {
@@ -51,6 +50,10 @@ body {
 	margin: 0;
 	padding: 0;
 	position: absolute;
+}
+
+#gameboard {
+	padding-top: 5rem;
 }
 
 

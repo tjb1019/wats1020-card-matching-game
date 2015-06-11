@@ -38,11 +38,6 @@ $(document).on('ready', function() {
 		}
 	];
 
-	var cardBacks = {
-		name: 'cardback design',
-		fileName: 'skulls.png'
-	};
-
 	/* Create jQuery objects */
 	var gameBoard = $('#gameboard');
 	var scoreVisual = $('.score-visual');
@@ -217,7 +212,7 @@ $(document).on('ready', function() {
 		playerRating.text("Your star rating this game: " + starRating);
 		playerRating.appendTo(gameBoard);
 
-		var playAgainButton = $('<button class="play-again btn btn-md btn-success center-block">');
+		var playAgainButton = $('<button class="play-again btn btn-md btn-warning center-block">');
 		
 		$(playAgainButton).on('click', function(event) {
 			initializeGame();
@@ -232,8 +227,10 @@ $(document).on('ready', function() {
 	$('.btn-start').on('click', function(event) {
 		event.preventDefault();
 		
+		// Hide rules
 		var ruleBox = $('#rules');
 		ruleBox.toggle();
+		// Show scoreboard in its place
 		var scoreBoard = $('#scoreboard');
 		scoreBoard.toggle();
 		initializeGame();
