@@ -13,8 +13,8 @@ body {
 }
 
 .score-title {
-	text-decoration: underline;
 	font-family: 'Bangers';
+	font-size: 300%;
 }
 
 .board-title {
@@ -27,6 +27,16 @@ body {
 	font-family: 'Bangers';
 	color: #E2F22E;
 	padding-right: 5rem;
+}
+
+#rules p,
+#rules ol {
+	font-family: 'Permanent Marker';
+}
+
+.btn-start {
+	background: #E2F22E;
+	font-family: 'Rock Salt';
 }
 
 .card {
@@ -53,7 +63,7 @@ body {
 }
 
 #gameboard {
-	padding-top: 5rem;
+	padding-top: 4rem;
 }
 
 
