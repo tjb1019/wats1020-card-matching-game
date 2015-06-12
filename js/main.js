@@ -111,7 +111,7 @@ $(document).on('ready', function() {
 
 	function addClickHandler(newDiv) {
 		newDiv.on('click', function(event) {
-			$(event.target.parentElement).find('.back').fadeOut(3000);
+			$(event.target.parentElement).find('.back').fadeOut();
 			checkUserGuess(event.target);
 		});
 	}
@@ -146,7 +146,7 @@ $(document).on('ready', function() {
 			}else{
 				calculateScore();
 				scoreboardUpdate();
-				resetGuess();
+				setTimeout(resetGuess, 2000);
 			}
 		} else if (gameState.currentTurn.length > 2) {
 			console.log("Shit got real");
