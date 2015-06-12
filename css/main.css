@@ -85,13 +85,10 @@ body {
 @media (max-width: 625px) {
 	#scoreboard {
 		font-size: 250%;
-		margin: 0 auto;
 	}
 	
 	.board-title {
-		display: inline-block;
-		width: 100%;
-		padding-left: 2rem;
+		margin-left: 25%;
 	}
 }
  
