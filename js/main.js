@@ -189,15 +189,15 @@ $(document).on('ready', function() {
 
 		// Calculate player's star rating
 		if (gameState.score >= 21) {
-			starRating = "3 STARS!";
+			starRating = "3";
 		}
 		else if (gameState.score >= 6 && gameState.score <= 20) {
-			starRating = "2 STARS!";
+			starRating = "2";
 		}
 		else if (gameState.score >= 1 && gameState.score <= 5) {
-			starRating = "1 STAR!";
+			starRating = "1";
 		}else{
-			starRating = "0 STARS!";
+			starRating = "no";
 		}
 
 		// Wipe out gameboard to display gameover screen
@@ -206,19 +206,38 @@ $(document).on('ready', function() {
 		// Create info display for gameover content
 		var gameOverTitle = $('<h2 class="page-header text-center">');
 		gameOverTitle.text("GAME OVER");
+		gameOverTitle.css({
+			'font-family': 'Permanent Marker'
+		});
 		gameOverTitle.appendTo(gameBoard);
 
 		var playerRating = $('<p class="text-center">');
-		playerRating.text("Your star rating this game: " + starRating);
+		playerRating.text(starRating + " star fo' you!");
+		playerRating.css({
+			'font-family': 'Permanent Marker',
+			'font-size': '200%',
+			'color': '#E2F22E'
+		});
 		playerRating.appendTo(gameBoard);
 
-		var playAgainButton = $('<button class="play-again btn btn-md btn-warning center-block">');
+		var playAgainButton = $('<p class="play-again hvr-pulse btn btn-lg text-center">');
 		
 		$(playAgainButton).on('click', function(event) {
 			initializeGame();
 		});
 		playAgainButton.text('Play Again');
+		playAgainButton.css({
+			'font-family': 'Rock Salt',
+			'background': '#E2F22E',
+			'color': 'black',
+			'box-shadow': '3px 3px 5px 6px rgba(0, 0, 0, 0.4)',
+			'margin-bottom': '2rem 25%'
+		});
 		playAgainButton.appendTo(gameBoard);
+		
+		var lebron = $('<iframe src="http://gfycat.com/ifr/AdeptEvergreenBluebottlejellyfish" frameborder="0" scrolling="no" width="500" height="500" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);">');
+		lebron.addClass('center-block');
+		lebron.appendTo(gameBoard);
 	}
 
 	/* Button event handlers */
