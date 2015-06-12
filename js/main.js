@@ -111,7 +111,7 @@ $(document).on('ready', function() {
 
 	function addClickHandler(newDiv) {
 		newDiv.on('click', function(event) {
-			$(event.target.parentElement).find('.back').fadeOut();
+			$(event.target.parentElement).find('.back').fadeOut(3000);
 			checkUserGuess(event.target);
 		});
 	}
