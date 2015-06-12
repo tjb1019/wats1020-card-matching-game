@@ -146,7 +146,7 @@ $(document).on('ready', function() {
 			}else{
 				calculateScore();
 				scoreboardUpdate();
-				setTimeout(resetGuess, 2000);
+				setTimeout(resetGuess, 1000);
 			}
 		} else if (gameState.currentTurn.length > 2) {
 			console.log("Shit got real");
