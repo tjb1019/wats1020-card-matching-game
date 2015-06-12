@@ -174,9 +174,8 @@ $(document).on('ready', function() {
 	function deactivateCards(correctCard) {
 		var matchedCards = $('div[data-name="'+ correctCard.name +'"].card');
 		matchedCards.off('click');
-		matchedCards.removeClass('card').addClass('matchedCard');
 		console.log(matchedCards.length);
-		gameState.cardsLeft = gameState.cardsLeft - (gameState.matched.length * 2);
+		gameState.cardsLeft -= 2;
 		console.log(gameState.cardsLeft);
 
 		if (gameState.cardsLeft <= 0) {
@@ -203,24 +202,39 @@ $(document).on('ready', function() {
 		// Wipe out gameboard to display gameover screen
 		gameBoard.empty();
 
-		// Create info display for gameover content
+		/* Create info display for gameover content */
+		
+		// Game over title
 		var gameOverTitle = $('<h2 class="page-header text-center">');
 		gameOverTitle.text("GAME OVER");
 		gameOverTitle.css({
-			'font-family': 'Permanent Marker'
+			'font-family': 'Permanent Marker',
+			'font-size': '400%'
 		});
 		gameOverTitle.appendTo(gameBoard);
 
+		// Player score text
 		var playerRating = $('<p class="text-center">');
-		playerRating.text(starRating + " star fo' you!");
+		playerRating.text(starRating + " stars fo' you!");
 		playerRating.css({
 			'font-family': 'Permanent Marker',
-			'font-size': '200%',
+			'font-size': '300%',
 			'color': '#E2F22E'
 		});
 		playerRating.appendTo(gameBoard);
-
-		var playAgainButton = $('<p class="play-again hvr-pulse btn btn-lg text-center">');
+		
+		// Lebron...
+		var lebron = $('<iframe src="http://gfycat.com/ifr/AdeptEvergreenBluebottlejellyfish" frameborder="0" scrolling="no" width="500" height="500" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);">');
+		lebron.addClass('center-block');
+		lebron.appendTo(gameBoard);
+		
+		// Play again button
+		var buttonContainer = $('<p class="text-center">');
+		buttonContainer.css({
+			'margin': '2rem 0'
+		});
+		var playAgainButton = $('<button class="play-again hvr-pulse btn btn-lg">');
+		playAgainButton.appendTo(buttonContainer);
 		
 		$(playAgainButton).on('click', function(event) {
 			initializeGame();
@@ -231,13 +245,8 @@ $(document).on('ready', function() {
 			'background': '#E2F22E',
 			'color': 'black',
 			'box-shadow': '3px 3px 5px 6px rgba(0, 0, 0, 0.4)',
-			'margin-bottom': '2rem 25%'
 		});
-		playAgainButton.appendTo(gameBoard);
-		
-		var lebron = $('<iframe src="http://gfycat.com/ifr/AdeptEvergreenBluebottlejellyfish" frameborder="0" scrolling="no" width="500" height="500" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);">');
-		lebron.addClass('center-block');
-		lebron.appendTo(gameBoard);
+		buttonContainer.appendTo(gameBoard);
 	}
 
 	/* Button event handlers */
